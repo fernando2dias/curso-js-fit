@@ -19,7 +19,7 @@ console.log(square(6));
 
 
 
-// IMMIDIATLEY INVOKABLE FUNCTION EXPRESSION - IIFs
+// IMMIDIATLEY INVOKABLE FUNCTION EXPRESSION - IIFEs
 (function(){
     console.log('IIFE Ran..');
 })();
