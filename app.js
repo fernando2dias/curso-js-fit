@@ -1,40 +1,32 @@
-let val;
+// document.getElementById()
+console.log(document.getElementById('task-title'));
 
-val = document;
-val = document.all;
-val = document.all[2];
-val = document.all.length;
-val = document.head;
-val = document.body;
-val = document.doctype;
-val = document.domain;
-val = document.URL;
-val = document.characterSet;
-val = document.contentType;
+// Get things from the element
+console.log(document.getElementById('task-title').id);
+console.log(document.getElementById('task-title').className);
 
-val = document.forms;
-val = document.forms[0];
-val = document.forms[0].id;
-val = document.forms[0].method;
-val = document.forms[0].action;
 
-val = document.links;
-val = document.links[0];
-val = document.links[0].id;
-val = document.links[0].className;
-val = document.links[0].classList[0];
+const taskTitle = document.getElementById('task-title');
 
-val = document.images;
+// Change styling 
+taskTitle.style.background = '#eee';
+taskTitle.style.padding = '20px';
 
-val = document.scripts;
-val = document.scripts[2].getAttribute('src');
+// Change content
+taskTitle.textContent = 'Task List';
+//or
+taskTitle.innerText = 'My Tasks';
+//or
+taskTitle.innerHTML = `<span style="font-weight:600">My Tasks</span>`;
 
-let scripts = document.scripts;
 
-let scriptsArr = Array.from(scripts);
+// document.querySelector()
+console.log(document.querySelector('#task-title')); // id selected
+console.log(document.querySelector('.card-title')); // class selected
+console.log(document.querySelector('h5')); // element selected
 
-scriptsArr.forEach(function(script) {
-  console.log(script.getAttribute('src'));
-});
 
-console.log(val);
+document.querySelector('li').style.color = 'blue'; // set first element
+document.querySelector('li:last-child').style.color = 'red'; // set last element
+document.querySelector('li:nth-child(3)').style.color = 'green'; // set a specific element
+
